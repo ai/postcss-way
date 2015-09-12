@@ -50,3 +50,26 @@ img {
   margin: 80px auto 0 auto;
 }
 </style>
+
+## Наши клиенты
+
+!image gett.png
+!image ebay.svg
+!image groupon.svg
+
+<style>
+img {
+  display: block;
+  margin: 0 auto 55px auto;
+}
+img:nth-child(2) {
+  margin-top: -40px;
+  height: 120px;
+}
+img:nth-child(3) {
+  width: 220px;
+}
+img:nth-child(4) {
+  width: 365px;
+}
+</style>
