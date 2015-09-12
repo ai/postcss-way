@@ -189,3 +189,88 @@ img {
   padding: 40px;
 }
 </style>
+
+## Схема работы
+
+<div class="postprocessing">
+    <div class="step is-css">
+        CSS
+        <span class="position">
+            <div class="note">карта кода</div>
+        </span>
+    </div>
+    <div class="step is-important">Парсер</div>
+    <div class="step">Плагин</div>
+    <div class="step">Плагин</div>
+    <div class="step is-important">Стригифайр</div>
+    <div class="step is-css">
+        Новый CSS
+        <span class="position">
+            <div class="note">новая карта</div>
+        </span>
+    </div>
+</div>
+
+<style>
+.postprocessing {
+  position: relative;
+  margin: 0 auto;
+  width: 210px;
+  top: -40px;
+}
+.step {
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+  margin-left: 3px;
+  font-size: 115%;
+}
+.step:after {
+  content: "↓";
+  font-size: 70%;
+  color: black;
+  position: absolute;
+  top: -46px;
+  left: 97px;
+}
+.step:first-child {
+  margin-top: 0;
+}
+.slide:first-child:after {
+  display: none;
+}
+.step.is-css {
+  padding: 0;
+  height: auto;
+  line-height: 1.1;
+  border: none;
+}
+.step.is-css:after {
+  display: none;
+  top: -27px;
+}
+.step.is-important {
+  padding: 0;
+  color: #0080e0;
+  border-width: 4px;
+  margin-left: 0;
+  font-weight: bold;
+}
+.step.is-important:after {
+  top: -48px;
+}
+.position {
+  position: relative;
+}
+.note {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  font-size: 55%;
+  white-space: nowrap;
+}
+</style>
