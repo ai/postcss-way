@@ -63,7 +63,7 @@ img {
   margin: 0 auto 55px auto;
 }
 img:nth-child(2) {
-  margin-top: -40px;
+  margin-top: -35px;
   height: 120px;
 }
 img:nth-child(3) {
@@ -80,7 +80,7 @@ img:nth-child(4) {
 
 !image autoprefixer.svg https://github.com/postcss/autoprefixer
 !image postcss.svg https://github.com/postcss/postcss
-!image evil-icons.svg https://github.com/outpunk/evil-icons
+!image evil-icons.svg http://evil-icons.io/
 !image size-marks.svg https://github.com/romashamin/Size-Marks-PS
 
 </p>
@@ -115,5 +115,14 @@ a:nth-child(3) img {
 }
 a:nth-child(4) img {
   width: 140px;
+}
+</style>
+
+## Что такое PostCSS?
+!cover start.jpg
+
+<style>
+h2 {
+  color: white;
 }
 </style>
