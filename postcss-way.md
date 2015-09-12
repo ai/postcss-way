@@ -164,3 +164,28 @@ h2 {
   width: 34px;
 }
 </style>
+
+## Пользователи PostCSS
+
+<p>
+
+!image yandex.svg
+!image wordpress.svg
+!image taobao.svg
+!image vk.svg
+
+</p>
+
+<style>
+p {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img {
+  max-height: 90px;
+  max-width: 320px;
+  padding: 40px;
+}
+</style>
