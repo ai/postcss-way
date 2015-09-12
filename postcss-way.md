@@ -73,3 +73,47 @@ img:nth-child(4) {
   width: 365px;
 }
 </style>
+
+## Наш опенсорс
+
+<p>
+
+!image autoprefixer.svg https://github.com/postcss/autoprefixer
+!image postcss.svg https://github.com/postcss/postcss
+!image evil-icons.svg https://github.com/outpunk/evil-icons
+!image size-marks.svg https://github.com/romashamin/Size-Marks-PS
+
+</p>
+
+<style>
+p {
+  margin: 120px -30px 0 -30px;
+  text-align: center;
+}
+a {
+  float: left;
+  display: block;
+  background: rgba(0, 128, 224, 0);
+}
+a:hover {
+  background: rgba(0, 128, 224, 0.1)
+}
+img {
+  display: block;
+  padding: 30px;
+}
+a:nth-child(1) img {
+  width: 195px;
+}
+a:nth-child(2) img {
+  width: 150px;
+}
+a:nth-child(3) img {
+  width: 125px;
+  position: relative;
+  top: -15px;
+}
+a:nth-child(4) img {
+  width: 140px;
+}
+</style>
