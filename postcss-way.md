@@ -1,4 +1,5 @@
-# Путь PostCSS
+# Практика PostCSS
+!favicon ./favicon.ico
 !theme ../showbox-bright
 
 [Андрей Ситник](http://sitnik.ru/), [Злые марсиане](https://evilmartians.com/)
