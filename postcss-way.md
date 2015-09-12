@@ -6,6 +6,10 @@
 
 ## Практика **PostCSS**
 
+!image postcss.svg
+
+Андрей Ситник, Злые марсиане
+
 <style>
 img {
   position: absolute;
@@ -33,6 +37,14 @@ p {
 }
 </style>
 
-Андрей Ситник, Злые марсиане
+##
 
-!image postcss.svg
+!image martians.svg
+
+<style>
+img {
+  display: block;
+  width: 320px;
+  margin: 80px auto 0 auto;
+}
+</style>
