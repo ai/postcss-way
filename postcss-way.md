@@ -118,7 +118,7 @@ a:nth-child(4) img {
 }
 </style>
 
-## Что такое PostCSS?
+## *Глава 1* Что такое PostCSS?
 !cover start.jpg
 
 <style>
@@ -286,3 +286,14 @@ gulp.task('css', () => {
         .pipe( gulp.desc('build/') );
 });
 ```
+
+## *Глава 2* Чем не является PostCSS
+!cover monkeys.jpg
+
+<style>
+h2 {
+  color: white;
+  text-shadow: 1px  1px 1px black, -1px  1px 1px black,
+               1px -1px 1px black, -1px -1px 1px black;
+}
+</style>
