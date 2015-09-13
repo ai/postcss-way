@@ -1,6 +1,7 @@
 # Практика PostCSS
 !favicon ./favicon.ico
-!theme ../showbox-ai
+!theme   ../showbox-ai
+!lang    ru
 
 [Андрей Ситник](http://sitnik.ru/), [Злые марсиане](https://evilmartians.com/)
 
