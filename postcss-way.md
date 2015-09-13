@@ -274,3 +274,15 @@ img {
   white-space: nowrap;
 }
 </style>
+
+## Использование
+
+```js
+gulp.task('css', () => {
+    let postcss = require('gulp-postcss');
+
+    return gulp.src('src/*.css')
+        .pipe( postcss([plugin1, plugin2]) )
+        .pipe( gulp.desc('build/') );
+});
+```
