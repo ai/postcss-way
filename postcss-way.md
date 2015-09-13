@@ -297,3 +297,30 @@ h2 {
                1px -1px 1px black, -1px -1px 1px black;
 }
 </style>
+
+## 1. Не конкурент Sass
+
+```js
+.pipe( ***sass***() )
+.pipe( ***postcss***([
+    require('cssnext'),
+    require('postcss-autoreset'),
+    require('postcss-font-magician'),
+    require('postcss-assets'),
+    require('grid'),
+    require('cssnano')
+]) )
+```
+
+## 2. Не только полифил «CSS4»
+
+## 3. Не только трансформация CSS
+
+```js
+postcss([
+    require('***postcss-flexbugs-fixes***'),
+    require('***stylint***'),
+    require('***doiuse***'),
+    require('postcss-browser-reporter')
+])
+```
