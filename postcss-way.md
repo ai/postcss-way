@@ -6,14 +6,25 @@
 [Андрей Ситник](http://sitnik.ru/), [Злые марсиане](https://evilmartians.com/)
 
 <style>
+.slide.cover {
+    h2 {
+        color: white;
+    }
+}
 .slide.with-l-code {
     pre {
         font-size: 80%;
     }
 }
-.slide.cover {
-    h2 {
-        color: white;
+.slide.with-2-sides {
+    pre, p {
+        float: left;
+        clear: left;
+        width: 350px;
+        &:nth-of-type(2) {
+            float: right;
+            clear: right;
+        }
     }
 }
 </style>
@@ -359,3 +370,102 @@ postcss([
 
 ## *Глава 3* Изоляция
 !cover alone.jpg
+
+## Компонентный подход
+
+<ul>
+  <li>
+    <code>logo/</code>
+    <ul>
+      <li><code>logo.js</code></li>
+      <li><code>logo.css</code></li>
+      <li><code>logo.svg</code></li>
+    </ul>
+  </li>
+  <li>
+    <code>header/</code>
+    <ul>
+      <li><code>header.js</code></li>
+      <li><code>header.css</code></li>
+    </ul>
+  </li>
+</ul>
+
+## Проблемы
+
+1. Конфликт селекторов
+2. Наследование стилей
+
+## *Проблема 1* Конфликт селекторов
+!type with-2-sides
+
+`logo.css`
+
+`header.css`
+
+```css
+***.name*** {
+    color: black;
+}
+```
+
+```css
+***.name*** {
+    color: gray;
+}
+```
+
+## *Решение 1* [postcss-bem](https://github.com/ileri/postcss-bem)
+!type with-2-sides
+
+```css
+***@b*** Logo {
+    ***@e*** name {
+        color: gray;
+    }
+}
+```
+
+```css
+.***Logo***-name {
+    color: gray
+}
+```
+
+## *Решение 2* [CSS Modules](https://github.com/css-modules/css-modules)
+!type with-2-sides
+
+```css
+.name {
+    color: gray;
+}
+```
+
+```css
+.***Logo***__name__***sVK0p*** {
+    color: gray
+}
+```
+
+## CSS Modules
+
+```js
+import ***styles*** from './logo.css';
+
+class Logo extends React.Component {
+    render() {
+        return <div className={ ***styles.name*** }>Our</div>;
+    }
+}
+```
+
+## Что выбрать
+
+**CSS Modules:**
+
+- Виджеты для других сайтов
+- Рендер на клиенте
+
+**БЭМ**
+
+- Статичные сайты
