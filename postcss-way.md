@@ -569,9 +569,7 @@ class Logo extends React.Component {
     color: white
 }
 
-.item***:not***(:first-child, .is-special) {
-
-}
+.item***:not***(:first-child, .is-special) { }
 ```
 
 ## [postcss-will-change](https://github.com/postcss/postcss-will-change)
