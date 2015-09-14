@@ -634,3 +634,54 @@ img {
     margin: 0 auto;
 }
 </style>
+
+## *Шаг 4* Шаблонизация
+!cover lang.jpg
+
+<style>
+h2 {
+    color: black;
+}
+</style>
+
+## *Правило 1* Используйте пакеты плагинов
+
+```js
+postcss([
+    require('***precss***')
+]);
+```
+
+## PreCSS
+
+```css
+***$blue:*** color(#cc00000 l(+10%));
+@define-mixin icon color { }
+
+.logo {
+    ***&***.is-big {
+        ***@mixin*** icon $blue;
+    }
+}
+```
+
+## Выбор шаблонизатора
+!type with-2-sides
+
+**Старый проект:**
+
+**Новый проект проект:**
+
+```js
+.pipe( ***sass***() )
+.pipe( postcss([
+    ...plugins
+]) )
+```
+
+```js
+.pipe( postcss([
+    ***precss***,
+    ...plugins
+]) )
+```
