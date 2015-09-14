@@ -368,7 +368,7 @@ postcss([
   <figcaption>— Махатма Ганди</figcaption>
 </figure>
 
-## *Глава 3* Изоляция
+## *Шаг 1* Изоляция
 !cover alone.jpg
 
 ## Компонентный подход
@@ -507,18 +507,20 @@ class Logo extends React.Component {
 !type with-2-sides
 
 ```css
-all: initial;
+.logo {
+    all: initial;
+}
 ```
 
 ```css
-color: black;
-background: white;
-box-sizing: content-box;
-line-height: normal;
-text-shadow: none;
-vertical-align: baseline;
-white-space: normal;
-…
+.logo {
+    color: black;
+    background: white;
+    box-sizing: content-box;
+    line-height: normal;
+    text-shadow: none;
+    vertical-align: baseline;
+    white-space: normal;
 ```
 
 ## Идеальная изоляция
@@ -526,3 +528,56 @@ white-space: normal;
 - CSS Modules
 - `postcss-autoreset`
 - `postcss-initial`
+
+## *Шаг 2* Полифилы будущего
+!cover future.jpg
+
+## *cssnext* Автопрефиксер
+!type with-2-sides
+
+```css
+:fullscreen { }
+```
+
+```css
+:***-webkit-***full-screen { }
+:***-moz-***full-screen { }
+:***-ms-***fullscreen { }
+:fullscreen { }
+```
+
+## *cssnext* Свои медиа-выражения
+
+```css
+@custom-media --phones (width ***<=*** 1000px);
+
+@media (***--phones***) { }
+```
+
+## *cssnext* Свои селекторы
+
+```css
+@custom-selector :--button button, input[type=submit];
+
+***:--button*** { }
+```
+
+## Новые селекторы
+
+```css
+.menu ***:any-link*** {
+    color: white
+}
+
+.item***:not***(:first-child, .is-special) {
+
+}
+```
+
+## [postcss-will-change](https://github.com/postcss/postcss-will-change)
+
+```css
+.rotator {
+    ***will-change***: transform;
+}
+```
