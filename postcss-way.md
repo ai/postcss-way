@@ -581,3 +581,56 @@ class Logo extends React.Component {
     ***will-change***: transform;
 }
 ```
+
+## *Шаг 3* Магия
+!cover magic.jpg
+
+<style>
+h2 {
+    position: absolute;
+    bottom: 80px;
+    text-shadow: 1px  1px 1px black, -1px  1px 1px black,
+                 1px -1px 1px black, -1px -1px 1px black;
+}
+</style>
+
+## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
+!type with-2-sides
+
+```css
+body {
+    font-family: ***Alice***;
+}
+```
+
+```css
+@font-face {
+    font-family: Alice;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Alice"),
+         url("//fonts.gstatic.com/….woff")
+             format("woff");
+}
+body {
+    font-family: Alice;
+}
+```
+
+<style>
+pre:nth-of-type(2) {
+    font-size: 70%;
+}
+</style>
+
+## *Опционально* [RTLCSS](https://github.com/MohammadYounes/rtlcss)
+
+!image rtlcss.png
+
+<style>
+img {
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+}
+</style>
