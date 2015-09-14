@@ -469,3 +469,54 @@ class Logo extends React.Component {
 **БЭМ**
 
 - Статичные сайты
+
+## *Проблема 2* Наследование свойств
+
+```html
+<Header>
+    ***background: black***
+    <Logo>
+        ***color: black***
+    </Logo>
+</Header>
+```
+
+## *Решение* [postcss-autoreset](https://github.com/maximkoretskiy/postcss-autoreset)
+!type with-2-sides
+
+```css
+.logo {
+    color: black;
+}
+.logo--big {
+    width: 200px;
+}
+```
+
+```css
+.logo {
+   *** all: initial; ***
+    color: black;
+}
+.logo--big {
+    width: 200px;
+}
+```
+
+## [postcss-initial](https://github.com/maximkoretskiy/postcss-initial) — полифил для IE
+!type with-2-sides
+
+```css
+all: initial;
+```
+
+```css
+color: black;
+background: white;
+box-sizing: content-box;
+line-height: normal;
+text-shadow: none;
+vertical-align: baseline;
+white-space: normal;
+…
+```
