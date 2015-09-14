@@ -11,6 +11,11 @@
         font-size: 80%;
     }
 }
+.slide.cover {
+    h2 {
+        color: white;
+    }
+}
 </style>
 
 ## Практика **PostCSS**
@@ -129,12 +134,6 @@ a:nth-child(4) img {
 
 ## *Глава 1* Что такое PostCSS?
 !cover start.jpg
-
-<style>
-h2 {
-  color: white;
-}
-</style>
 
 ## 1 000 000 загрузок в месяц
 
@@ -301,7 +300,6 @@ gulp.task('css', () => {
 
 <style>
 h2 {
-  color: white;
   text-shadow: 1px  1px 1px black, -1px  1px 1px black,
                1px -1px 1px black, -1px -1px 1px black;
 }
@@ -358,3 +356,6 @@ postcss([
   </blockquote>
   <figcaption>— Махатма Ганди</figcaption>
 </figure>
+
+## *Глава 3* Изоляция
+!cover alone.jpg
