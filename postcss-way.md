@@ -520,3 +520,9 @@ vertical-align: baseline;
 white-space: normal;
 …
 ```
+
+## Идеальная изоляция
+
+- CSS Modules
+- `postcss-autoreset`
+- `postcss-initial`
