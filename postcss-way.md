@@ -5,6 +5,14 @@
 
 [Андрей Ситник](http://sitnik.ru/), [Злые марсиане](https://evilmartians.com/)
 
+<style>
+.slide.with-l-code {
+    pre {
+        font-size: 80%;
+    }
+}
+</style>
+
 ## Практика **PostCSS**
 
 !image postcss.svg
@@ -314,6 +322,19 @@ h2 {
 ```
 
 ## 2. Не только полифил «CSS4»
+!type with-l-code
+
+```css
+@define-mixin hover $color {
+    background-color: $color;
+    &:hover {
+        background-color: color($color l(+5%));
+    }
+    &:active {
+        background-color: color($color l(-5%));
+    }
+}
+```
 
 ## 3. Не только трансформация CSS
 
@@ -325,3 +346,15 @@ postcss([
     require('postcss-browser-reporter')
 ])
 ```
+
+## 4. Нет одного пути PostCSS
+
+<figure>
+  <blockquote>
+    <p>
+      Свобода ничего не стоит, если она не включает
+      в себя свободу ошибаться
+    </p>
+  </blockquote>
+  <figcaption>— Махатма Ганди</figcaption>
+</figure>
