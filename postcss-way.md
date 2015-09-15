@@ -17,7 +17,7 @@
     }
 }
 .slide.with-2-sides {
-    pre, p {
+    pre, p, ul, ol {
         float: left;
         clear: left;
         width: 350px;
@@ -391,6 +391,11 @@ postcss([
   </li>
 </ul>
 
+## Сборка
+
+- webpack
+- Gulp и Browserify
+
 ## Проблемы
 
 1. Конфликт селекторов
@@ -683,3 +688,34 @@ postcss([
     ...plugins
 ]) )
 ```
+
+## *Правило 2* Не программируйте в CSS
+!type with-l-code
+
+```css
+@define-mixin icon $color {
+    background-color: $color;
+    &:hover {
+        background-color: color($color l(+10%))
+    }
+}
+
+.icon.is-facebook {
+    @mixin icon facebook-color;
+}
+```
+
+## *Правило 3* Универсальные плагины
+!type with-2-sides
+
+**Sass**
+
+**PostCSS**
+
+1. Написать быстро примесь
+2. Забросить его
+
+
+1. Продумать API
+2. Опубликовать плагин
+3. Принять PR от умных людей
