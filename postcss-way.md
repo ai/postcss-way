@@ -877,3 +877,88 @@ img {
     margin: 0 auto;
 }
 </style>
+
+## *Шаг 8* Сжатие
+!cover compress.jpg
+
+## [cssnano](http://cssnano.co/)
+
+1. Убираем пробелы
+2. Убираем комментарии
+3. Оптимизируем `font-weight`
+4. Удаляем пустые правила
+5. Удаляем дубликаты
+6. Вычисляем `calc()`
+7. Обхединяем свойства
+8. …
+
+## Объединяем анимации
+
+`cssnano({ mergeIdents: true })`
+
+```css
+@keyframes ***rotate*** {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes ***flip*** {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+```
+
+```css
+@keyframes ***flip*** {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+```
+
+<style>
+pre {
+    font-size: 70%;
+    float: left;
+    width: 350px;
+    &:nth-of-type(2) {
+        float: right;
+    }
+}
+</style>
+
+## Упрощаем имена
+
+`cssnano({ mergeIdents: true, reduceIdents: true })`
+
+```css
+@keyframes ***whiteToBlack*** {
+    0% { color: #fff; }
+    to { color: #000; }
+}
+
+.one {
+    animation-name: ***whiteToBlack***;
+}
+```
+
+```css
+@keyframes ***a*** {
+    0% { color: #fff; }
+    to { color: #000; }
+}
+
+.one {
+    animation-name: ***a***;
+}
+```
+
+<style>
+pre {
+    font-size: 70%;
+    float: left;
+    width: 350px;
+    &:nth-of-type(2) {
+        float: right;
+    }
+}
+</style>
