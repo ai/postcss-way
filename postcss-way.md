@@ -349,7 +349,6 @@ gulp.task('css', () => {
 
 ```js
 postcss([
-    require('***postcss-flexbugs-fixes***'),
     require('***stylint***'),
     require('***doiuse***'),
     require('postcss-browser-reporter')
@@ -604,7 +603,7 @@ class Logo extends React.Component {
 ***:--button*** { }
 ```
 
-## Новые селекторы
+## *cssnext* Новые селекторы
 
 ```css
 .menu ***:any-link*** {
@@ -619,6 +618,23 @@ class Logo extends React.Component {
 ```css
 .rotator {
     ***will-change***: transform;
+}
+```
+
+## [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)
+!type with-2-sides
+
+Ошибка флексбокса в IE 11:
+
+```css
+.foo {
+    flex: 1;
+}
+```
+
+```css
+.foo {
+    flex: 1 1 0%;
 }
 ```
 
@@ -701,6 +717,15 @@ postcss([
     ***&***.is-big {
         ***@mixin*** icon $blue;
     }
+}
+```
+
+## [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup)
+
+```css
+.icon {
+    width: 20px;
+    height: ***@width***;
 }
 ```
 
@@ -818,3 +843,37 @@ pre {
     }
 }
 ```
+
+## *Шаг 7* Линтеры
+!cover control.jpg
+
+## [stylelint](http://stylelint.io/)
+
+Более 85 правил:
+
+```
+"rules": {
+    "color-no-invalid-hex": 2,
+    "declaration-colon-space-before": [2, "never"],
+    "indentation": [2, "tab"],
+    "number-leading-zero": [2, "always"]
+}
+```
+
+## [doiuse](https://github.com/anandthakker/doiuse)
+
+```
+main.css:13:3: Pointer events not supported by: IE (9,10)
+```
+
+## [postcss-browser-reporter](https://github.com/postcss/postcss-browser-reporter)
+
+!image reporter.png
+
+<style>
+img {
+    display: block;
+    width: 780px;
+    margin: 0 auto;
+}
+</style>
