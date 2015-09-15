@@ -11,6 +11,12 @@
         color: white;
     }
 }
+.slide.with-shadow {
+    h2 {
+        text-shadow: 1px  1px 1px black, -1px  1px 1px black,
+                     1px -1px 1px black, -1px -1px 1px black;
+    }
+}
 .slide.with-l-code {
     pre {
         font-size: 80%;
@@ -308,13 +314,7 @@ gulp.task('css', () => {
 
 ## *Глава 2* Чем не является PostCSS
 !cover monkeys.jpg
-
-<style>
-h2 {
-  text-shadow: 1px  1px 1px black, -1px  1px 1px black,
-               1px -1px 1px black, -1px -1px 1px black;
-}
-</style>
+!type  with-shadow
 
 ## 1. Не конкурент Sass
 
@@ -368,7 +368,44 @@ postcss([
   <figcaption>— Махатма Ганди</figcaption>
 </figure>
 
-## *Шаг 1* Изоляция
+## *Шаг 1* Подключение плагинов
+!cover connect.jpg
+!type  with-shadow
+
+## *Проблема* Неявность
+
+```css
+.icon {
+    top: ***center***;
+}
+```
+
+## *Правило 1* [postcss-use](https://github.com/postcss/postcss-use)
+
+```css
+***@use postcss-center;***
+
+.icon {
+    top: center;
+}
+```
+
+## *Режим* Проект для себя
+
+- **Глобально:** часто используемые
+- **Локально:** только в паре файлов
+
+## *Режим* Обычный
+
+- **Глобально:** Автопрефиксер, cssnext, картинки
+- **Локально:** расширяют синтаксис
+
+## *Режим* Слишком большая команда
+
+- **Глобально:** Автопрефиксер
+- **Локально:** всё остальное
+
+## *Шаг 2* Изоляция
 !cover alone.jpg
 
 ## Компонентный подход
@@ -534,7 +571,7 @@ class Logo extends React.Component {
 - `postcss-autoreset`
 - `postcss-initial`
 
-## *Шаг 2* Полифилы будущего
+## *Шаг 3* Полифилы будущего
 !cover future.jpg
 
 ## *cssnext* Автопрефиксер
@@ -585,15 +622,14 @@ class Logo extends React.Component {
 }
 ```
 
-## *Шаг 3* Магия
+## *Шаг 4* Магия
 !cover magic.jpg
+!type  with-shadow
 
 <style>
 h2 {
     position: absolute;
     bottom: 80px;
-    text-shadow: 1px  1px 1px black, -1px  1px 1px black,
-                 1px -1px 1px black, -1px -1px 1px black;
 }
 </style>
 
@@ -638,7 +674,7 @@ img {
 }
 </style>
 
-## *Шаг 4* Шаблонизация
+## *Шаг 5* Шаблонизация
 !cover lang.jpg
 
 <style>
@@ -647,7 +683,7 @@ h2 {
 }
 </style>
 
-## *Правило 1* Используйте пакеты плагинов
+## *Правило 2* Используйте пакеты плагинов
 
 ```js
 postcss([
@@ -689,7 +725,7 @@ postcss([
 ]) )
 ```
 
-## *Правило 2* Не программируйте в CSS
+## *Правило 3* Не программируйте в CSS
 !type with-l-code
 
 ```css
@@ -705,7 +741,7 @@ postcss([
 }
 ```
 
-## *Правило 3* Универсальные плагины
+## *Правило 4* Универсальные плагины
 !type with-2-sides
 
 **Sass**
@@ -720,15 +756,9 @@ postcss([
 2. Опубликовать плагин
 3. Принять PR от умных людей
 
-## *Шаг 5* Картинки
+## *Шаг 6* Картинки
 !cover image.jpg
-
-<style>
-h2 {
-    text-shadow: 1px  1px 1px black, -1px  1px 1px black,
-                 1px -1px 1px black, -1px -1px 1px black;
-}
-</style>
+!type  with-shadow
 
 ## [postcss-assets](https://github.com/borodean/postcss-assets)
 
