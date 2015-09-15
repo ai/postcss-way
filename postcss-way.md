@@ -962,3 +962,66 @@ pre {
     }
 }
 </style>
+
+## *Глава 3* Обзор
+!cover wow.jpg
+!type  with-shadow
+
+## Зачем PostCSS
+
+- Полная изоляция компонента
+- Перестать ждать CSS4
+- Забыть о `@font-face`
+- Крутая работа с SVG
+- Упростить код-ревью
+
+## Правила
+
+1. Подключайте с помощью `postcss-use`
+2. Выбирайте пакеты плагинов
+3. Не программируйте в CSS
+4. Создавайте универсальные плагины
+
+##
+!cover fin.jpg
+!type  with-shadow
+
+## [github.com/**postcss**/**postcss**](http://github.com/postcss/postcss)
+
+* Презентация: [ai.github.io/about-postcss](http://ai.github.io/about-postcss/)
+* ВКонтакте: [vk.com/postcss](https://vk.com/postcss)
+* Ищем таланты:<br>[bit.ly / evl frnt](https://bit.ly/evlfrnt/)
+
+!image martians.svg
+
+<style>
+&::after {
+    visibility: hidden;
+}
+h2 a {
+    background: none;
+    color: gray;
+    font-family: Open Sans, sans-serif;
+    strong {
+      padding: 0 10px;
+      color: black;
+    }
+}
+li {
+    font-size: 140%;
+    margin-top: 15px;
+    &::before {
+        visibility: hidden;
+    }
+    &:nth-child(3) {
+        margin-top: 80px;
+        line-height: 1.5;
+    }
+}
+img {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+    width: 250px;
+}
+</style>
