@@ -719,3 +719,72 @@ postcss([
 1. Продумать API
 2. Опубликовать плагин
 3. Принять PR от умных людей
+
+## *Шаг 5* Картинки
+!cover image.jpg
+
+<style>
+h2 {
+    text-shadow: 1px  1px 1px black, -1px  1px 1px black,
+                 1px -1px 1px black, -1px -1px 1px black;
+}
+</style>
+
+## [postcss-assets](https://github.com/borodean/postcss-assets)
+
+```css
+.icon {
+    width: ***width***('logo.png');
+    height: ***height***('logo.png');
+    background: ***inline***('logo.png');
+    background-size: ***size***('logo.png', 2);
+}
+```
+
+## [postcss-svg](https://github.com/Pavliko/postcss-svg)
+
+```css
+.icon {
+    background: ***svg***('logo.svg', '***[fill]: #c00***');
+}
+```
+
+## [postcss-svg-fallback](https://github.com/justim/postcss-svg-fallback)
+!type with-2-sides
+
+```css
+.icon {
+    background: url(logo.svg);
+    background-size: 20px 20px;
+}
+```
+
+```css
+.icon {
+    background: url(logo.svg);
+    background-size: 20px 20px;
+}
+
+.no-svg.icon {
+    background: url(***logo-20x20.png***);
+}
+```
+
+<style>
+pre {
+    font-size: 80%;
+}
+</style>
+
+## [postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg)
+
+```css
+.arrow {
+    ***@svg*** {
+        polygon {
+            fill: green;
+            points: 50,100 0,0 0,100;
+        }
+    }
+}
+```
