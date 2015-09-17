@@ -397,7 +397,7 @@ postcss([
 ## *Режим* Обычный
 
 - **Глобально:** Автопрефиксер, cssnext, картинки
-- **Локально:** расширяют синтаксис
+- **Локально:** расширяющие синтаксис
 
 ## *Режим* Слишком большая команда
 
@@ -495,7 +495,7 @@ import ***styles*** from './logo.css';
 
 class Logo extends React.Component {
     render() {
-        return <div className={ ***styles.name*** }>Our</div>;
+        return <div className={ ***styles.name*** }>We</div>;
     }
 }
 ```
@@ -774,7 +774,7 @@ postcss([
 **PostCSS**
 
 1. Написать быстро примесь
-2. Забросить его
+2. Забросить её
 
 
 1. Продумать API
@@ -851,12 +851,11 @@ pre {
 
 Более 85 правил:
 
-```
+```js
 "rules": {
-    "color-no-invalid-hex": 2,
-    "declaration-colon-space-before": [2, "never"],
-    "indentation": [2, "tab"],
-    "number-leading-zero": [2, "always"]
+    ***"indentation"***:          2,
+    ***"number-leading-zero"***:  2,
+    ***"color-no-invalid-hex"***: 2
 }
 ```
 
@@ -978,7 +977,7 @@ pre {
 ## Правила
 
 1. Подключайте с помощью `postcss-use`
-2. Выбирайте пакеты плагинов
+2. Используйте пакеты плагинов
 3. Не программируйте в CSS
 4. Создавайте универсальные плагины
 
