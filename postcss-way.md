@@ -986,8 +986,8 @@ pre {
 
 ## [github.com/**postcss**/**postcss**](http://github.com/postcss/postcss)
 
-* Презентация: [ai.github.io/postcss-way](http://ai.github.io/postcss-way/)
-* ВКонтакте: [vk.com/postcss](https://vk.com/postcss)
+* Презентация: [ai.github.io / postcss-way / ru](http://ai.github.io/postcss-way/ru)
+* ВКонтакте: [vk.com / postcss](https://vk.com/postcss)
 * Ищем таланты:<br>[bit.ly / evl frnt](http://bit.ly/evlfrnt)
 
 !image martians.svg
