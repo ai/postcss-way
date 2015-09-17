@@ -990,7 +990,7 @@ pre {
 
 * Презентация: [ai.github.io/postcss-way](http://ai.github.io/postcss-way/)
 * ВКонтакте: [vk.com/postcss](https://vk.com/postcss)
-* Ищем таланты:<br>[bit.ly / evl frnt](https://bit.ly/evlfrnt/)
+* Ищем таланты:<br>[bit.ly / evl frnt](http://bit.ly/evlfrnt)
 
 !image martians.svg
 
