@@ -988,7 +988,7 @@ pre {
 
 ## [github.com/**postcss**/**postcss**](http://github.com/postcss/postcss)
 
-* Презентация: [ai.github.io/about-postcss](http://ai.github.io/about-postcss/)
+* Презентация: [ai.github.io/postcss-way](http://ai.github.io/postcss-way/)
 * ВКонтакте: [vk.com/postcss](https://vk.com/postcss)
 * Ищем таланты:<br>[bit.ly / evl frnt](https://bit.ly/evlfrnt/)
 
