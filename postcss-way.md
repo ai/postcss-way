@@ -227,7 +227,7 @@ img {
     <div class="step is-important">Парсер</div>
     <div class="step">Плагин</div>
     <div class="step">Плагин</div>
-    <div class="step is-important">Стригифайр</div>
+    <div class="step is-important">Генератор</div>
     <div class="step is-css">
         Новый CSS
         <span class="position">
@@ -265,7 +265,7 @@ img {
 .step:first-child {
   margin-top: 0;
 }
-.slide:first-child:after {
+.step:first-child:after {
   display: none;
 }
 .step.is-css {
@@ -275,7 +275,6 @@ img {
   border: none;
 }
 .step.is-css:after {
-  display: none;
   top: -27px;
 }
 .step.is-important {
