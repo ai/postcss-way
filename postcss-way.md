@@ -320,9 +320,8 @@ gulp.task('css', () => {
 ```js
 .pipe( ***sass***() )
 .pipe( ***postcss***([
-    require('cssnext'),
-    require('postcss-autoreset'),
-    require('postcss-font-magician'),
+    require('autoprefixer'),
+    require('postcss-cssnext'),
     require('postcss-assets'),
     require('grid'),
     require('cssnano')
@@ -572,7 +571,7 @@ class Logo extends React.Component {
 ## *Шаг 3* Полифилы будущего
 !cover future.jpg
 
-## *cssnext* Автопрефиксер
+## [autoprefixer](https://github.com/postcss/autoprefixer)
 !type with-2-sides
 
 ```css
@@ -586,7 +585,7 @@ class Logo extends React.Component {
 :fullscreen { }
 ```
 
-## *cssnext* Свои медиа-выражения
+## *postcss-cssnext* Свои медиа-выражения
 
 ```css
 @custom-media --phones (width ***<=*** 1000px);
@@ -594,7 +593,7 @@ class Logo extends React.Component {
 @media (***--phones***) { }
 ```
 
-## *cssnext* Свои селекторы
+## *postcss-cssnext* Свои селекторы
 
 ```css
 @custom-selector :--button button, input[type=submit];
@@ -602,7 +601,7 @@ class Logo extends React.Component {
 ***:--button*** { }
 ```
 
-## *cssnext* Новые селекторы
+## *postcss-cssnext* Новые селекторы
 
 ```css
 .menu ***:any-link*** {
