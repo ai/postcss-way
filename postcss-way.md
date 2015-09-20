@@ -347,7 +347,7 @@ gulp.task('css', () => {
 
 ```js
 postcss([
-    require('***stylint***'),
+    require('***stylelint***'),
     require('***doiuse***'),
     require('postcss-browser-reporter')
 ])
