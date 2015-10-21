@@ -320,18 +320,19 @@ h6 + p, {
   <div class="line" style="height: 75.56%"></div>
   <div class="line" style="height: 89.25%"></div>
   <div class="line" style="height: 100%"></div>
+  <div class="line" style="height: 121.14%"></div>
 </div>
 
 <style>
 .stat {
-  margin-top: 100px;
-  height: 300px;
+  margin-top: 50px;
+  height: 280px;
   position: relative;
 }
 .line {
   display: inline-block;
   background: #0080e0;
-  width: 34px;
+  width: 32px;
 }
 </style>
 
