@@ -270,26 +270,16 @@ gulp.task('css', () => {
 }
 ```
 
-## [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors)
+## *Спецификация W3C* [postcss-media-minmax](https://github.com/cssnext/postcss-media-minmax)
 !type with-2-sides
 
 ```css
-@custom-selector ***:--title***
-    h1, h2, h3, h4, h5, h6;
-
-***:--title*** + p {
-    margin-top: 0;
+@media (width ***<=*** 600px) {
 }
 ```
 
 ```css
-h1 + p,
-h2 + p,
-h3 + p,
-h4 + p,
-h5 + p,
-h6 + p, {
-   margin-top: 0;
+@media (***max-***width: 600px) {
 }
 ```
 
@@ -390,7 +380,7 @@ postcss([
 }
 ```
 
-## *Правило 1* [postcss-use](https://github.com/postcss/postcss-use)
+## *Решение* [postcss-use](https://github.com/postcss/postcss-use)
 
 ```css
 ***@use postcss-center;***
@@ -452,7 +442,7 @@ var moment = ***require***('moment');
   </li>
 </ul>
 
-## Сборка
+## Сборка CSS и JS вместе
 
 - webpack
 - Gulp и Browserify
@@ -580,7 +570,7 @@ div {
 }
 ```
 
-## [postcss-initial](https://github.com/maximkoretskiy/postcss-initial) — полифил для IE
+## *Спецификация W3C* [postcss-initial](https://github.com/maximkoretskiy/postcss-initial) — полифил для IE
 !type with-2-sides
 
 ```css
@@ -606,84 +596,6 @@ div {
 - `postcss-autoreset`
 - `postcss-initial`
 
-## *Шаг 3* Полифилы будущего
-!cover future.jpg
-
-## [autoprefixer](https://github.com/postcss/autoprefixer)
-!type with-2-sides
-
-```css
-:fullscreen { }
-```
-
-```css
-:***-webkit-***full-screen { }
-:***-moz-***full-screen { }
-:***-ms-***fullscreen { }
-:fullscreen { }
-```
-
-## *postcss-cssnext* Свои медиа-выражения
-
-```css
-@custom-media --phones (width ***<=*** 1000px);
-
-@media (***--phones***) { }
-```
-
-## *postcss-cssnext* Свои селекторы
-
-```css
-@custom-selector :--button button, input[type=submit];
-
-***:--button*** { }
-```
-
-## *postcss-cssnext* Новые селекторы
-
-```css
-.menu ***:any-link*** {
-    color: white
-}
-
-.item***:not***(:first-child, .is-special) { }
-```
-
-## [postcss-will-change](https://github.com/postcss/postcss-will-change)
-
-```css
-.rotator {
-    ***will-change***: transform;
-}
-```
-
-## [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)
-!type with-2-sides
-
-Ошибка флексбокса в IE 11:
-
-```css
-.foo {
-    flex: 1;
-}
-```
-
-```css
-.foo {
-    flex: 1 1 0%;
-}
-```
-
-## *Шаг 4* Магия
-!cover magic.jpg
-!type  with-shadow
-
-<style>
-h2 {
-    position: absolute;
-    bottom: 80px;
-}
-</style>
 
 ## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
 !type with-2-sides
@@ -714,19 +626,7 @@ pre:nth-of-type(2) {
 }
 </style>
 
-## *Опционально* [RTLCSS](https://github.com/MohammadYounes/rtlcss)
-
-!image rtlcss.png
-
-<style>
-img {
-    display: block;
-    width: 700px;
-    margin: 0 auto;
-}
-</style>
-
-## *Шаг 5* Шаблонизация
+## *Глава 4* Явный код
 !cover lang.jpg
 
 <style>
@@ -735,28 +635,27 @@ h2 {
 }
 </style>
 
-## *Правило 2* Используйте пакеты плагинов
+## Правило 4
 
-```js
-postcss([
-    require('***precss***')
-]);
-```
+<div class="rule">
+Убирайте «магические числа» в стилях с помощью PostCSS
+</div>
 
-## PreCSS
+## [postcss-assets](https://github.com/borodean/postcss-assets)
+
+Размеры картинок:
 
 ```css
-***$blue:*** color(#cc00000 l(+10%));
-@define-mixin icon color { }
-
-.logo {
-    ***&***.is-big {
-        ***@mixin*** icon $blue;
-    }
+.icon {
+    width: ***width***('logo.png');
+    height: ***height***('logo.png');
+    background: inline('logo.png');
 }
 ```
 
 ## [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup)
+
+Ссылка на другие свойства:
 
 ```css
 .icon {
@@ -765,80 +664,70 @@ postcss([
 }
 ```
 
-## Выбор шаблонизатора
+## [postcss-contrast](https://github.com/stephenway/postcss-contrast)
+
+Чёрный или белый шрифт в зависимости от фона:
+
+```css
+.menu {
+    background: #dd3735;
+    color: ***contrast***(@background);
+}
+```
+
+## *Спецификация W3C* [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+
+```css
+@custom-media --phones (width <= 700px);
+@custom-media --hidpi  (resolution >= 2dppx);
+
+@media (***--phones***) { }
+@media (***--phones***) and (***--hidpi***) { }
+```
+
+## Правило 5
+
+<div class="rule">
+Прячем хаки в плагины
+</div>
+
+## [autoprefixer](https://github.com/postcss/autoprefixer)
 !type with-2-sides
 
-**Старый проект:**
-
-**Новый проект:**
-
-```js
-.pipe( ***sass***() )
-.pipe( postcss([
-    ...plugins
-]) )
+```css
+:fullscreen { }
 ```
-
-```js
-.pipe( postcss([
-    ***precss***,
-    ...plugins
-]) )
-```
-
-## *Правило 3* Не программируйте в CSS
-!type with-l-code
 
 ```css
-@define-mixin icon $color {
-    background-color: $color;
-    &:hover {
-        background-color: color($color l(+10%))
-    }
-}
-
-.icon.is-facebook {
-    @mixin icon facebook-color;
-}
+:***-webkit-***full-screen { }
+:***-moz-***full-screen { }
+:***-ms-***fullscreen { }
+:fullscreen { }
 ```
 
-## *Правило 4* Универсальные плагины
+## [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
 !type with-2-sides
 
-**Sass**
-
-**PostCSS**
-
-1. Написать быстро примесь
-2. Забросить её
-
-
-1. Продумать API
-2. Опубликовать плагин
-3. Принять PR от умных людей
-
-## *Шаг 6* Картинки
-!cover image.jpg
-!type  with-shadow
-
-## [postcss-assets](https://github.com/borodean/postcss-assets)
-
 ```css
-.icon {
-    width: ***width***('logo.png');
-    height: ***height***('logo.png');
-    background: ***inline***('logo.png');
-    background-size: ***size***('logo.png', 2);
+.popup {
+    background:
+        ***rgba***(153, 221, 153, 0.8);
 }
 ```
 
-## [postcss-svg](https://github.com/Pavliko/postcss-svg)
-
 ```css
-.icon {
-    background: ***svg***('logo.svg', '***[fill]: #c00***');
+.popup {
+    background: ***#99dd99***; /* IE 8 */
+    background:
+        rgba(153, 221, 153, 0.8);
 }
 ```
+
+<style>
+pre {
+    font-size: 80%;
+}
+</style>
 
 ## [postcss-svg-fallback](https://github.com/justim/postcss-svg-fallback)
 !type with-2-sides
@@ -867,6 +756,14 @@ pre {
 }
 </style>
 
+## [postcss-svg](https://github.com/Pavliko/postcss-svg)
+
+```css
+.icon {
+    background: ***svg***('logo.svg', '***[fill]: #c00***');
+}
+```
+
 ## [postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg)
 
 ```css
@@ -880,6 +777,29 @@ pre {
 }
 ```
 
+## *Шаг 4* Магия
+!cover magic.jpg
+!type  with-shadow
+
+<style>
+h2 {
+    position: absolute;
+    bottom: 80px;
+}
+</style>
+
+## *Опционально* [RTLCSS](https://github.com/MohammadYounes/rtlcss)
+
+!image rtlcss.png
+
+<style>
+img {
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+}
+</style>
+
 ## *Шаг 7* Линтеры
 !cover control.jpg
 
@@ -892,6 +812,23 @@ pre {
     ***"indentation"***:          2,
     ***"number-leading-zero"***:  2,
     ***"color-no-invalid-hex"***: 2
+}
+```
+
+## [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)
+!type with-2-sides
+
+Ошибка флексбокса в IE 11:
+
+```css
+.foo {
+    flex: 1;
+}
+```
+
+```css
+.foo {
+    flex: 1 1 0%;
 }
 ```
 
@@ -912,20 +849,6 @@ img {
     margin: 0 auto;
 }
 </style>
-
-## *Шаг 8* Сжатие
-!cover compress.jpg
-
-## [cssnano](http://cssnano.co/)
-
-1. Убираем пробелы
-2. Убираем комментарии
-3. Оптимизируем `font-weight`
-4. Удаляем пустые правила
-5. Удаляем дубликаты
-6. Вычисляем `calc()`
-7. Объединяем свойства
-8. …
 
 ## *Глава 3* Обзор
 !cover wow.jpg
