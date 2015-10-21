@@ -33,6 +33,11 @@
         }
     }
 }
+.rule {
+  padding: 15px 20px;
+  background: #fafaa2;
+  margin: 0 -20px 48px -20px;
+}
 </style>
 
 ## Практика **PostCSS**
@@ -361,7 +366,7 @@ img {
 }
 </style>
 
-## *Глава 1* Плагины
+## *Глава 2* Плагины
 !cover connect.jpg
 !type  with-shadow
 
@@ -397,75 +402,35 @@ postcss([
 
 ## Правило 1
 
-**Все плагины, добавляющие свой синтаксис,<br>подключать через `postcss-use`**
+<div class="rule">
+Все плагины, добавляющие свой синтаксис,<br>подключать через postcss-use
+</div>
 
 - Глобально: Автопрефиксер, cssnext, postcss-url
 - Через `@use`: lost, postcss-center, postcss-circle
 
 ## Правило 2
 
-**Начинайте с пакетов плагинов**
+<div class="rule">
+Начинайте с пакетов плагинов
+</div>
 
 - `precss`: возможности Sass
 - `cssnext`: полифилы для CSS4
 - `oldie`: автоподдержка старых IE
 
-## *Глава 2* Чем не является PostCSS
-!cover monkeys.jpg
-!type  with-shadow
-
-## 1. Не конкурент Sass
-
-```js
-.pipe( ***sass***() )
-.pipe( ***postcss***([
-    require('autoprefixer'),
-    require('postcss-cssnext'),
-    require('postcss-assets'),
-    require('grid'),
-    require('cssnano')
-]) )
-```
-
-## 2. Не только полифил «CSS4»
-!type with-l-code
-
-```css
-@define-mixin hover $color {
-    background-color: $color;
-    &:hover {
-        background-color: color($color l(+5%));
-    }
-    &:active {
-        background-color: color($color l(-5%));
-    }
-}
-```
-
-## 3. Не только трансформация CSS
-
-```js
-postcss([
-    require('***stylelint***'),
-    require('***doiuse***'),
-    require('postcss-browser-reporter')
-])
-```
-
-## 4. Нет одного пути PostCSS
-
-<figure>
-  <blockquote>
-    <p>
-      Свобода ничего не стоит, если она не включает
-      в себя свободу ошибаться
-    </p>
-  </blockquote>
-  <figcaption>— Махатма Ганди</figcaption>
-</figure>
-
-## *Шаг 2* Изоляция
+## *Глава 3* Изоляция
 !cover alone.jpg
+
+## Правило 3
+
+<div class="rule">Используйте PostCSS для поддерживаемого кода, а не синтаксического сахара</div>
+
+## Изоляция в JS
+
+```js
+var moment = ***require***('moment');
+```
 
 ## Компонентный подход
 
@@ -548,7 +513,7 @@ postcss([
 }
 ```
 
-## CSS Modules
+## CSS Modules в JS
 
 ```js
 import ***styles*** from './logo.css';
@@ -580,6 +545,17 @@ class Logo extends React.Component {
         ***color: black***
     </Logo>
 </Header>
+```
+
+## *Проблема 3* Виджет для стороннего сайта
+
+```css
+* {
+    box-sizing: border-box;
+}
+div {
+    margin-top: 10px;
+}
 ```
 
 ## *Решение* [postcss-autoreset](https://github.com/maximkoretskiy/postcss-autoreset)
