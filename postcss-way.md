@@ -414,7 +414,7 @@ postcss([
 
 ## Правило 3
 
-<div class="rule">Используйте PostCSS для поддерживаемого кода, а не синтаксического сахара</div>
+<div class="rule">Используйте PostCSS для поддерживаемого кода, а не только синтаксического сахара</div>
 
 ## Изоляция в JS
 
@@ -777,31 +777,14 @@ pre {
 }
 ```
 
-## *Шаг 4* Магия
-!cover magic.jpg
-!type  with-shadow
-
-<style>
-h2 {
-    position: absolute;
-    bottom: 80px;
-}
-</style>
-
-## *Опционально* [RTLCSS](https://github.com/MohammadYounes/rtlcss)
-
-!image rtlcss.png
-
-<style>
-img {
-    display: block;
-    width: 700px;
-    margin: 0 auto;
-}
-</style>
-
-## *Шаг 7* Линтеры
+## *Глава 6* Линтеры
 !cover control.jpg
+
+## Правило 6
+
+<div class="rule">
+PostCSS не только для изменения, но и для проверки CSS
+</div>
 
 ## [stylelint](http://stylelint.io/)
 
@@ -850,24 +833,41 @@ img {
 }
 </style>
 
-## *Глава 3* Обзор
+## *Глава 7* Десерт
+!cover magic.jpg
+!type  with-shadow
+
+<style>
+h2 {
+    position: absolute;
+    bottom: 80px;
+}
+</style>
+
+## [RTLCSS](https://github.com/MohammadYounes/rtlcss)
+
+!image rtlcss.png
+
+<style>
+img {
+    display: block;
+    width: 700px;
+    margin: 0 auto;
+}
+</style>
+
+## *Глава 8* Обзор
 !cover wow.jpg
 !type  with-shadow
 
-## Зачем PostCSS
+## Используем PostCSS правильно
 
-- Полная изоляция компонента
-- Перестать ждать CSS4
-- Забыть о `@font-face`
-- Крутая работа с SVG
-- Упростить код-ревью
-
-## Правила
-
-1. Подключайте с помощью `postcss-use`
-2. Используйте пакеты плагинов
-3. Не программируйте в CSS
-4. Создавайте универсальные плагины
+1. Плагины, меняющие синтаксис, подключать через `postcss-use`
+2. Начинайте с пакетов плагинов
+3. Изолируем на компоненты
+4. Убирайте «магические числа»
+5. Прячем хаки в плагины
+6. Используем линтеры
 
 ##
 !cover fin.jpg
@@ -877,7 +877,6 @@ img {
 
 * Презентация: [ai.github.io / postcss-way / ru](http://ai.github.io/postcss-way/ru)
 * ВКонтакте: [vk.com / postcss](https://vk.com/postcss)
-* Ищем таланты:<br>[bit.ly / evl frnt](http://bit.ly/evlfrnt)
 
 !image martians.svg
 
