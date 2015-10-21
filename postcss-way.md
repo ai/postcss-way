@@ -152,69 +152,6 @@ a:nth-child(4) img {
 ## *Глава 1* Что такое PostCSS?
 !cover start.jpg
 
-## 1 000 000 загрузок в месяц
-
-<div class="stat">
-  <div class="line" style="height: 0.67%"></div>
-  <div class="line" style="height: 1.11%"></div>
-  <div class="line" style="height: 2.56%"></div>
-  <div class="line" style="height: 4.3%"></div>
-  <div class="line" style="height: 5.41%"></div>
-  <div class="line" style="height: 9.22%"></div>
-  <div class="line" style="height: 13.1%"></div>
-  <div class="line" style="height: 15.94%"></div>
-  <div class="line" style="height: 20.56%"></div>
-  <div class="line" style="height: 24.85%"></div>
-  <div class="line" style="height: 27.34%"></div>
-  <div class="line" style="height: 26.79%"></div>
-  <div class="line" style="height: 33.45%"></div>
-  <div class="line" style="height: 43.43%"></div>
-  <div class="line" style="height: 48.81%"></div>
-  <div class="line" style="height: 59.05%"></div>
-  <div class="line" style="height: 71.5%"></div>
-  <div class="line" style="height: 75.56%"></div>
-  <div class="line" style="height: 89.25%"></div>
-  <div class="line" style="height: 100%"></div>
-</div>
-
-<style>
-.stat {
-  margin-top: 100px;
-  height: 300px;
-  position: relative;
-}
-.line {
-  display: inline-block;
-  background: #0080e0;
-  width: 34px;
-}
-</style>
-
-## Пользователи PostCSS
-
-<p>
-
-!image yandex.svg
-!image wordpress.svg
-!image taobao.svg
-!image vk.svg
-
-</p>
-
-<style>
-p {
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-img {
-  max-height: 90px;
-  max-width: 320px;
-  padding: 40px;
-}
-</style>
-
 ## Схема работы
 
 <div class="postprocessing">
@@ -306,10 +243,122 @@ gulp.task('css', () => {
     let postcss = require('gulp-postcss');
 
     return gulp.src('src/*.css')
-        .pipe( ***postcss([plugin1, plugin2])*** )
+        .pipe( ***postcss([ plugin1, plugin2 ])*** )
         .pipe( gulp.desc('build/') );
 });
 ```
+
+## [postcss-nested](https://github.com/postcss/postcss-nested)
+!type with-2-sides
+
+```css
+.block {
+    ***&_title*** {
+        font-size: 200%;
+    }
+}
+```
+
+```js
+***.block_title*** {
+    font-size: 200%;
+}
+```
+
+## [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors)
+!type with-2-sides
+
+```css
+@custom-selector ***:--title***
+    h1, h2, h3, h4, h5, h6;
+
+***:--title*** + p {
+    margin-top: 0;
+}
+```
+
+```css
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p, {
+   margin-top: 0;
+}
+```
+
+## Зачем?
+
+Выйти за пределы старых препроцессоров:
+
+* Автопрефиксер и полифилы
+* Линтеры
+* Новые синтаксисы
+* Новые идеи
+
+## 1 000 000 загрузок в месяц
+
+<div class="stat">
+  <div class="line" style="height: 0.67%"></div>
+  <div class="line" style="height: 1.11%"></div>
+  <div class="line" style="height: 2.56%"></div>
+  <div class="line" style="height: 4.3%"></div>
+  <div class="line" style="height: 5.41%"></div>
+  <div class="line" style="height: 9.22%"></div>
+  <div class="line" style="height: 13.1%"></div>
+  <div class="line" style="height: 15.94%"></div>
+  <div class="line" style="height: 20.56%"></div>
+  <div class="line" style="height: 24.85%"></div>
+  <div class="line" style="height: 27.34%"></div>
+  <div class="line" style="height: 26.79%"></div>
+  <div class="line" style="height: 33.45%"></div>
+  <div class="line" style="height: 43.43%"></div>
+  <div class="line" style="height: 48.81%"></div>
+  <div class="line" style="height: 59.05%"></div>
+  <div class="line" style="height: 71.5%"></div>
+  <div class="line" style="height: 75.56%"></div>
+  <div class="line" style="height: 89.25%"></div>
+  <div class="line" style="height: 100%"></div>
+</div>
+
+<style>
+.stat {
+  margin-top: 100px;
+  height: 300px;
+  position: relative;
+}
+.line {
+  display: inline-block;
+  background: #0080e0;
+  width: 34px;
+}
+</style>
+
+## Пользователи PostCSS
+
+<p>
+
+!image yandex.svg
+!image wordpress.svg
+!image taobao.svg
+!image vk.svg
+
+</p>
+
+<style>
+p {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img {
+  max-height: 90px;
+  max-width: 320px;
+  padding: 40px;
+}
+</style>
 
 ## *Глава 2* Чем не является PostCSS
 !cover monkeys.jpg
