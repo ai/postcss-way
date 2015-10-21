@@ -397,10 +397,18 @@ postcss([
 
 ## Правило 1
 
-Все плагины, добавляющие свой синтаксис,<br>подключать через `postcss-use`
+**Все плагины, добавляющие свой синтаксис,<br>подключать через `postcss-use`**
 
-- **Глобально:** Автопрефиксер, cssnext, postcss-url
-- **Через @use:** `lost`, `postcss-center`, `postcss-circle`
+- Глобально: Автопрефиксер, cssnext, postcss-url
+- Через `@use`: lost, postcss-center, postcss-circle
+
+## Правило 2
+
+**Начинайте с пакетов плагинов**
+
+- `precss`: возможности Sass
+- `cssnext`: полифилы для CSS4
+- `oldie`: автоподдержка старых IE
 
 ## *Глава 2* Чем не является PostCSS
 !cover monkeys.jpg
