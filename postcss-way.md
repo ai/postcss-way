@@ -360,6 +360,45 @@ img {
 }
 </style>
 
+## *Глава 1* Плагины
+!cover connect.jpg
+!type  with-shadow
+
+## Задаём плагины
+
+```js
+postcss([
+    require('autoprefixer')({
+        browsers: 'last 2 version'
+    }),
+    require('postcss-cssnext'),
+    require('precss')
+])
+```
+
+## *Проблема* Неявность
+
+```css
+.icon {
+    top: ***center***;
+}
+```
+
+## *Правило 1* [postcss-use](https://github.com/postcss/postcss-use)
+
+```css
+***@use postcss-center;***
+
+.icon {
+    top: center;
+}
+```
+
+## Добавляем плагины
+
+- **Глобально:** работающие с обычным CSS (как Автопрефиксер)
+- **Через @use:** добавляющие новый синтаксис
+
 ## *Глава 2* Чем не является PostCSS
 !cover monkeys.jpg
 !type  with-shadow
@@ -413,43 +452,6 @@ postcss([
   </blockquote>
   <figcaption>— Махатма Ганди</figcaption>
 </figure>
-
-## *Шаг 1* Подключение плагинов
-!cover connect.jpg
-!type  with-shadow
-
-## *Проблема* Неявность
-
-```css
-.icon {
-    top: ***center***;
-}
-```
-
-## *Правило 1* [postcss-use](https://github.com/postcss/postcss-use)
-
-```css
-***@use postcss-center;***
-
-.icon {
-    top: center;
-}
-```
-
-## *Режим* Проект для себя
-
-- **Глобально:** часто используемые
-- **Локально:** только в паре файлов
-
-## *Режим* Обычный
-
-- **Глобально:** Автопрефиксер, cssnext, картинки
-- **Локально:** расширяющие синтаксис
-
-## *Режим* Слишком большая команда
-
-- **Глобально:** Автопрефиксер
-- **Локально:** всё остальное
 
 ## *Шаг 2* Изоляция
 !cover alone.jpg
