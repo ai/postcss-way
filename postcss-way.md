@@ -859,6 +859,27 @@ img {
 !cover wow.jpg
 !type  with-shadow
 
+## PostCSS не конкурент Sass
+!type with-2-sides
+
+**Старый проект:**
+
+**Новый проект:**
+
+```js
+.pipe( ***sass***() )
+.pipe( postcss([
+    ...plugins
+]) )
+```
+
+```js
+.pipe( postcss([
+    ***precss***,
+    ...plugins
+]) )
+```
+
 ## Используем PostCSS правильно
 
 1. Плагины, меняющие синтаксис, подключать через `postcss-use`
