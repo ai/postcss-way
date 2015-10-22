@@ -157,6 +157,15 @@ a:nth-child(4) img {
 ## *Глава 1* Что такое PostCSS?
 !cover start.jpg
 
+## Старые препроцессоры
+
+```css
+a {
+    ***<%=*** include clickable ***%>***
+    color: ***<%=*** $link-color ***%>***;
+}
+```
+
 ## Схема работы
 
 <div class="postprocessing">
