@@ -367,7 +367,7 @@ img {
 }
 </style>
 
-## *Глава 2* Плагины
+## *Глава 2* Подключение плагинов
 !cover connect.jpg
 !type  with-shadow
 
