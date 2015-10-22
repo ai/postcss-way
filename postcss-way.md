@@ -834,13 +834,12 @@ img {
 </style>
 
 ## *Глава 7* Десерт
-!cover magic.jpg
+!cover food.jpg
 !type  with-shadow
 
 <style>
 h2 {
     position: absolute;
-    bottom: 80px;
 }
 </style>
 
