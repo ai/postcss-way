@@ -284,11 +284,13 @@ gulp.task('css', () => {
 
 ```css
 @media (width ***<=*** 600px) {
+    …
 }
 ```
 
 ```css
 @media (***max-***width: 600px) {
+    …
 }
 ```
 
@@ -605,36 +607,6 @@ div {
 - `postcss-autoreset`
 - `postcss-initial`
 
-
-## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
-!type with-2-sides
-
-```css
-body {
-    font-family: ***Alice***;
-}
-```
-
-```css
-@font-face {
-    font-family: Alice;
-    font-style: normal;
-    font-weight: 400;
-    src: local("Alice"),
-         url("//fonts.gstatic.com/….woff")
-             format("woff");
-}
-body {
-    font-family: Alice;
-}
-```
-
-<style>
-pre:nth-of-type(2) {
-    font-size: 70%;
-}
-</style>
-
 ## *Глава 4* Явный код
 !cover lang.jpg
 
@@ -738,6 +710,35 @@ pre {
 }
 </style>
 
+## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
+!type with-2-sides
+
+```css
+body {
+    font-family: ***Alice***;
+}
+```
+
+```css
+@font-face {
+    font-family: Alice;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Alice"),
+         url("//fonts.gstatic.com/….woff")
+             format("woff");
+}
+body {
+    font-family: Alice;
+}
+```
+
+<style>
+pre:nth-of-type(2) {
+    font-size: 70%;
+}
+</style>
+
 ## [postcss-svg-fallback](https://github.com/justim/postcss-svg-fallback)
 !type with-2-sides
 
@@ -770,19 +771,6 @@ pre {
 ```css
 .icon {
     background: ***svg***('logo.svg', '***[fill]: #c00***');
-}
-```
-
-## [postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg)
-
-```css
-.arrow {
-    ***@svg*** {
-        polygon {
-            fill: green;
-            points: 50,100 0,0 0,100;
-        }
-    }
 }
 ```
 
@@ -846,11 +834,18 @@ img {
 !cover food.jpg
 !type  with-shadow
 
-<style>
-h2 {
-    position: absolute;
+## [postcss-write-svg](https://github.com/jonathantneal/postcss-write-svg)
+
+```css
+.arrow {
+    ***@svg*** {
+        polygon {
+            fill: green;
+            points: 50,100 0,0 0,100;
+        }
+    }
 }
-</style>
+```
 
 ## [RTLCSS](https://github.com/MohammadYounes/rtlcss)
 
@@ -893,10 +888,10 @@ img {
 
 1. Плагины, меняющие синтаксис, подключать через `postcss-use`
 2. Начинайте с пакетов плагинов
-3. Изолируем на компоненты
+3. Изолируйте код по компонентам
 4. Убирайте «магические числа»
-5. Прячем хаки в плагины
-6. Используем линтеры
+5. Прячьте хаки в плагины
+6. Используйте линтеры
 
 ##
 !cover fin.jpg
@@ -906,6 +901,7 @@ img {
 
 * Презентация: [ai.github.io / postcss-way / ru](http://ai.github.io/postcss-way/ru)
 * ВКонтакте: [vk.com / postcss](https://vk.com/postcss)
+* Твиттер: [@postcss](https://twitter.com/postcss)
 
 !image martians.svg
 
@@ -923,14 +919,10 @@ h2 a {
     }
 }
 li {
-    font-size: 140%;
-    margin-top: 15px;
+    font-size: 145%;
+    margin-top: 10px;
     &::before {
         visibility: hidden;
-    }
-    &:nth-child(3) {
-        margin-top: 80px;
-        line-height: 1.5;
     }
 }
 img {
