@@ -415,8 +415,8 @@ postcss([
 </div>
 
 - `precss`: возможности Sass
-- `cssnext`: полифилы для CSS4
-- `oldie`: автоподдержка старых IE
+- `cssnext`: полифилы для «CSS 4»
+- `oldie`: поддержка IE 8
 
 ## *Глава 3* Изоляция
 !cover alone.jpg
