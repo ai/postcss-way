@@ -34,9 +34,9 @@
     }
 }
 .rule {
-  padding: 15px 20px;
-  background: #fafaa2;
-  margin: 0 -20px 48px -20px;
+    padding: 15px 20px;
+    background: #fafaa2;
+    margin: 0 -20px 48px -20px;
 }
 </style>
 
@@ -48,30 +48,30 @@
 
 <style>
 img {
-  position: absolute;
-  top: 93px;
-  right: 130px;
-  width: 195px;
+    position: absolute;
+    top: 93px;
+    right: 130px;
+    width: 195px;
 }
 h2 {
-  font-size: 80px;
-  letter-spacing: 2px;
-  position: relative;
-  top: 10px;
+    font-size: 80px;
+    letter-spacing: 2px;
+    position: relative;
+    top: 10px;
 }
 h2 strong {
-  display: block;
-  font-size: 116%;
-  margin-top: 25px;
+    display: block;
+    font-size: 116%;
+    margin-top: 25px;
 }
 p {
-  font-family: "Open Sans Light";
-  font-style: normal;
-  position: absolute;
-  bottom: 50px;
+    font-family: "Open Sans Light";
+    font-style: normal;
+    position: absolute;
+    bottom: 50px;
 }
 &::after {
-  visibility: hidden;
+    visibility: hidden;
 }
 </style>
 
@@ -81,9 +81,9 @@ p {
 
 <style>
 img {
-  display: block;
-  width: 320px;
-  margin: 80px auto 0 auto;
+    display: block;
+    width: 320px;
+    margin: 80px auto 0 auto;
 }
 </style>
 
@@ -95,18 +95,18 @@ img {
 
 <style>
 img {
-  display: block;
-  margin: 0 auto 55px auto;
+    display: block;
+    margin: 0 auto 55px auto;
 }
 img:nth-child(2) {
-  margin-top: -35px;
-  height: 120px;
+    margin-top: -35px;
+    height: 120px;
 }
 img:nth-child(3) {
-  width: 220px;
+    width: 220px;
 }
 img:nth-child(4) {
-  width: 365px;
+    width: 365px;
 }
 </style>
 
@@ -123,34 +123,34 @@ img:nth-child(4) {
 
 <style>
 p {
-  margin: 120px -30px 0 -30px;
-  text-align: center;
+    margin: 120px -30px 0 -30px;
+    text-align: center;
 }
 a {
-  float: left;
-  display: block;
-  background: rgba(0, 128, 224, 0);
+    float: left;
+    display: block;
+    background: rgba(0, 128, 224, 0);
 }
 a:hover {
-  background: rgba(0, 128, 224, 0.1)
+    background: rgba(0, 128, 224, 0.1)
 }
 img {
-  display: block;
-  padding: 30px;
+    display: block;
+    padding: 30px;
 }
 a:nth-child(1) img {
-  width: 195px;
+    width: 195px;
 }
 a:nth-child(2) img {
-  width: 150px;
+    width: 150px;
 }
 a:nth-child(3) img {
-  width: 125px;
-  position: relative;
-  top: -15px;
+    width: 125px;
+    position: relative;
+    top: -15px;
 }
 a:nth-child(4) img {
-  width: 140px;
+    width: 140px;
 }
 </style>
 
@@ -189,64 +189,64 @@ a {
 
 <style>
 .postprocessing {
-  position: relative;
-  margin: 0 auto;
-  width: 210px;
-  top: -40px;
+    position: relative;
+    margin: 0 auto;
+    width: 210px;
+    top: -40px;
 }
 .step {
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  margin-top: 32px;
-  margin-left: 3px;
-  font-size: 115%;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 32px;
+    margin-left: 3px;
+    font-size: 115%;
 }
 .step:after {
-  content: "↓";
-  font-size: 70%;
-  color: black;
-  position: absolute;
-  top: -46px;
-  left: 97px;
+    content: "↓";
+    font-size: 70%;
+    color: black;
+    position: absolute;
+    top: -46px;
+    left: 97px;
 }
 .step:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .step:first-child:after {
-  display: none;
+    display: none;
 }
 .step.is-css {
-  padding: 0;
-  height: auto;
-  line-height: 1.1;
-  border: none;
+    padding: 0;
+    height: auto;
+    line-height: 1.1;
+    border: none;
 }
 .step.is-css:after {
-  top: -27px;
+    top: -27px;
 }
 .step.is-important {
-  padding: 0;
-  color: #0080e0;
-  border-width: 4px;
-  margin-left: 0;
-  font-weight: bold;
+    padding: 0;
+    color: #0080e0;
+    border-width: 4px;
+    margin-left: 0;
+    font-weight: bold;
 }
 .step.is-important:after {
-  top: -48px;
+    top: -48px;
 }
 .position {
-  position: relative;
+    position: relative;
 }
 .note {
-  position: absolute;
-  top: 11px;
-  left: 15px;
-  font-size: 55%;
-  white-space: nowrap;
+    position: absolute;
+    top: 11px;
+    left: 15px;
+    font-size: 55%;
+    white-space: nowrap;
 }
 </style>
 
@@ -306,39 +306,39 @@ gulp.task('css', () => {
 ## 1 000 000 загрузок в месяц
 
 <div class="stat">
-  <div class="line" style="height: 0.67%"></div>
-  <div class="line" style="height: 1.11%"></div>
-  <div class="line" style="height: 2.56%"></div>
-  <div class="line" style="height: 4.3%"></div>
-  <div class="line" style="height: 5.41%"></div>
-  <div class="line" style="height: 9.22%"></div>
-  <div class="line" style="height: 13.1%"></div>
-  <div class="line" style="height: 15.94%"></div>
-  <div class="line" style="height: 20.56%"></div>
-  <div class="line" style="height: 24.85%"></div>
-  <div class="line" style="height: 27.34%"></div>
-  <div class="line" style="height: 26.79%"></div>
-  <div class="line" style="height: 33.45%"></div>
-  <div class="line" style="height: 43.43%"></div>
-  <div class="line" style="height: 48.81%"></div>
-  <div class="line" style="height: 59.05%"></div>
-  <div class="line" style="height: 71.5%"></div>
-  <div class="line" style="height: 75.56%"></div>
-  <div class="line" style="height: 89.25%"></div>
-  <div class="line" style="height: 100%"></div>
-  <div class="line" style="height: 121.14%"></div>
+    <div class="line" style="height: 0.67%"></div>
+    <div class="line" style="height: 1.11%"></div>
+    <div class="line" style="height: 2.56%"></div>
+    <div class="line" style="height: 4.3%"></div>
+    <div class="line" style="height: 5.41%"></div>
+    <div class="line" style="height: 9.22%"></div>
+    <div class="line" style="height: 13.1%"></div>
+    <div class="line" style="height: 15.94%"></div>
+    <div class="line" style="height: 20.56%"></div>
+    <div class="line" style="height: 24.85%"></div>
+    <div class="line" style="height: 27.34%"></div>
+    <div class="line" style="height: 26.79%"></div>
+    <div class="line" style="height: 33.45%"></div>
+    <div class="line" style="height: 43.43%"></div>
+    <div class="line" style="height: 48.81%"></div>
+    <div class="line" style="height: 59.05%"></div>
+    <div class="line" style="height: 71.5%"></div>
+    <div class="line" style="height: 75.56%"></div>
+    <div class="line" style="height: 89.25%"></div>
+    <div class="line" style="height: 100%"></div>
+    <div class="line" style="height: 121.14%"></div>
 </div>
 
 <style>
 .stat {
-  margin-top: 50px;
-  height: 280px;
-  position: relative;
+    margin-top: 50px;
+    height: 280px;
+    position: relative;
 }
 .line {
-  display: inline-block;
-  background: #0080e0;
-  width: 32px;
+    display: inline-block;
+    background: #0080e0;
+    width: 32px;
 }
 </style>
 
@@ -355,15 +355,15 @@ gulp.task('css', () => {
 
 <style>
 p {
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 img {
-  max-height: 90px;
-  max-width: 320px;
-  padding: 40px;
+    max-height: 90px;
+    max-width: 320px;
+    padding: 40px;
 }
 </style>
 
@@ -436,21 +436,21 @@ var moment = ***require***('moment');
 ## Компонентный подход
 
 <ul>
-  <li>
-    <code>logo/</code>
-    <ul>
-      <li><code>logo.js</code></li>
-      <li><code>logo.css</code></li>
-      <li><code>logo.svg</code></li>
-    </ul>
-  </li>
-  <li>
-    <code>header/</code>
-    <ul>
-      <li><code>header.js</code></li>
-      <li><code>header.css</code></li>
-    </ul>
-  </li>
+    <li>
+        <code>logo/</code>
+        <ul>
+            <li><code>logo.js</code></li>
+            <li><code>logo.css</code></li>
+            <li><code>logo.svg</code></li>
+        </ul>
+    </li>
+    <li>
+        <code>header/</code>
+        <ul>
+            <li><code>header.js</code></li>
+            <li><code>header.css</code></li>
+        </ul>
+    </li>
 </ul>
 
 ## Сборка CSS и JS вместе
