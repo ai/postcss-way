@@ -886,7 +886,7 @@ img {
 
 ## Используем PostCSS правильно
 
-1. Плагины, меняющие синтаксис, подключать через `postcss-use`
+1. Плагины, меняющие синтаксис, поключайте через `postcss-use`
 2. Начинайте с пакетов плагинов
 3. Изолируйте код по компонентам
 4. Убирайте «магические числа»
@@ -897,11 +897,12 @@ img {
 !cover fin.jpg
 !type  with-shadow
 
-## [github.com/**postcss**/**postcss**](http://github.com/postcss/postcss)
+## Ссылки
 
-* Презентация: [ai.github.io / postcss-way / ru](http://ai.github.io/postcss-way/ru)
-* ВКонтакте: [vk.com / postcss](https://vk.com/postcss)
-* Твиттер: [@postcss](https://twitter.com/postcss)
+* [vk.com / postcss](https://vk.com/postcss)
+* [@postcss](https://twitter.com/postcss)
+* [@andrey_sitnik](https://twitter.com/andrey_sitnik)
+* [@evilmartians](https://twitter.com/evilmartians)
 
 !image martians.svg
 
@@ -909,20 +910,18 @@ img {
 &::after {
     visibility: hidden;
 }
-h2 a {
-    background: none;
-    color: gray;
-    font-family: Open Sans, sans-serif;
-    strong {
-      padding: 0 10px;
-      color: black;
-    }
-}
 li {
-    font-size: 145%;
-    margin-top: 10px;
+    font-size: 180%;
+    line-height: 1;
+    margin-bottom: 40px;
     &::before {
         visibility: hidden;
+    }
+    &:first-child {
+        margin-top: 70px;
+    }
+    &:nth-child(3) {
+        margin-top: 90px;
     }
 }
 img {
