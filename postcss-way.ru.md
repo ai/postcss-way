@@ -541,9 +541,9 @@ class Logo extends React.Component {
 
 ```html
 <Header>
-    ***background: black***
+    ***color: white***
     <Logo>
-        ***color: black***
+        ***background: white***
     </Logo>
 </Header>
 ```
