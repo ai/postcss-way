@@ -390,7 +390,7 @@ postcss([
 ])
 ```
 
-## *Problem* Implicit
+## *Problem* Implicitness
 
 ```css
 .icon {
@@ -411,7 +411,7 @@ postcss([
 ## Rule 1
 
 <div class="rule">
-All plugins with custom syntax should be added by postcss-use
+All plugins with a custom syntax should be added by postcss-use
 </div>
 
 - Global: Autoprefixer, cssnext, postcss-url
@@ -420,10 +420,10 @@ All plugins with custom syntax should be added by postcss-use
 ## Rule 2
 
 <div class="rule">
-Start from plugins packs
+Start with plugins packs
 </div>
 
-- `precss`: Sass like features
+- `precss`: Sass-like features
 - `cssnext`: polyfills for “CSS 4”
 - `oldie`: IE 8 support
 
@@ -539,8 +539,8 @@ class Logo extends React.Component {
 
 **CSS Modules:**
 
-- Client-side render
-- Third-part widgets
+- Client-side rendering
+- Third-party widgets
 
 **BEM**
 
@@ -557,7 +557,7 @@ class Logo extends React.Component {
 </Header>
 ```
 
-## *Problem 3* Third-Part Widgets
+## *Problem 3* Third-Party Widgets
 
 ```css
 * {
@@ -656,7 +656,7 @@ Reference to other property:
 
 ## [postcss-contrast](https://github.com/stephenway/postcss-contrast)
 
-Black or white font for best contrast with background:
+Black or white font for the best contrast with background:
 
 ```css
 .menu {
@@ -789,7 +789,7 @@ pre {
 ## Rule 6
 
 <div class="rule">
-Use PostCSS for lint CSS, not only to transform it
+Use PostCSS to lint CSS, not only to transform it
 </div>
 
 ## [stylelint](http://stylelint.io/)
@@ -895,12 +895,12 @@ img {
 
 ## The Right Way to Use PostCSS
 
-1. Use `postcss-use` for plugins with custom syntax
+1. Use `postcss-use` for plugins with a custom syntax
 2. Start with plugins packs
 3. Write isolated components
 4. Reduce “magic numbers”
 5. Hide hacks
-6. Use Linters
+6. Use linters
 
 ##
 !cover fin.jpg
