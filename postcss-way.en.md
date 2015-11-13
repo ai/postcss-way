@@ -348,10 +348,10 @@ Break old preprocessors limits:
 
 <p>
 
-!image yandex.svg
+!image google.svg
 !image wordpress.svg
 !image taobao.svg
-!image vk.svg
+!image webpack.png
 
 </p>
 
@@ -363,9 +363,14 @@ p {
     justify-content: center;
 }
 img {
+    position: relative;
     max-height: 90px;
     max-width: 320px;
     padding: 40px;
+    &:nth-of-type(4) {
+        top: -30px;
+        max-height: 180px;
+    }
 }
 </style>
 
