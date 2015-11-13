@@ -462,11 +462,6 @@ var moment = ***require***('moment');
     </li>
 </ul>
 
-## Build CSS and JS together
-
-- webpack
-- Gulp with Browserify
-
 ## Problems
 
 1. Conflicting selectors
@@ -538,7 +533,7 @@ class Logo extends React.Component {
 }
 ```
 
-## Ways to eliminate conflicting selectors
+## What Isolation You Should Use
 
 **CSS Modules:**
 
@@ -657,17 +652,6 @@ Make a reference to another property:
 }
 ```
 
-## [postcss-contrast](https://github.com/stephenway/postcss-contrast)
-
-Black or white font for the best contrast with background:
-
-```css
-.menu {
-    background: #dd3735;
-    color: ***contrast***(@background);
-}
-```
-
 ## *W3C Draft* [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 
 ```css
@@ -698,30 +682,6 @@ Use PostCSS to hide hacks
 :fullscreen { }
 ```
 
-## [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
-!type with-2-sides
-
-```css
-.popup {
-    background:
-        ***rgba***(153, 221, 153, 0.8);
-}
-```
-
-```css
-.popup {
-    background: ***#99dd99***; /* IE 8 */
-    background:
-        rgba(153, 221, 153, 0.8);
-}
-```
-
-<style>
-pre {
-    font-size: 80%;
-}
-</style>
-
 ## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
 !type with-2-sides
 
@@ -749,6 +709,30 @@ body {
 <style>
 pre:nth-of-type(2) {
     font-size: 70%;
+}
+</style>
+
+## [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
+!type with-2-sides
+
+```css
+.popup {
+    background:
+        ***rgba***(153, 221, 153, 0.8);
+}
+```
+
+```css
+.popup {
+    background: ***#99dd99***; /* IE 8 */
+    background:
+        rgba(153, 221, 153, 0.8);
+}
+```
+
+<style>
+pre {
+    font-size: 80%;
 }
 </style>
 
