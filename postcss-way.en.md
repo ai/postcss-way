@@ -508,6 +508,9 @@ var moment = ***require***('moment');
 }
 ```
 
+## All machines must suffer
+!type shout
+
 ## *Solution 2* [CSS Modules](https://github.com/css-modules/css-modules)
 !type with-2-sides
 
