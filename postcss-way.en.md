@@ -159,7 +159,7 @@ a:nth-child(4) img {
 ## *Part 1* What is PostCSS?
 !cover start.jpg
 
-## Old Preprocessors
+## Older Preprocessors
 
 ```css
 a {
@@ -296,9 +296,9 @@ gulp.task('css', () => {
 }
 ```
 
-## Why?
+## Why did we create PostCSS?
 
-Break old preprocessors limits:
+To overcome older preprocessors' limits:
 
 * Autoprefixer and polyfills
 * Linters
@@ -378,7 +378,7 @@ img {
 !cover connect.jpg
 !type  with-shadow
 
-## Plugins Set
+## Setting up Plugins
 
 ```js
 postcss([
@@ -411,7 +411,7 @@ postcss([
 ## Rule 1
 
 <div class="rule">
-All plugins with a custom syntax should be added by postcss-use
+All plugins with custom syntax should be added via postcss-use
 </div>
 
 - Global: Autoprefixer, cssnext, postcss-url
@@ -420,7 +420,7 @@ All plugins with a custom syntax should be added by postcss-use
 ## Rule 2
 
 <div class="rule">
-Start with plugins packs
+Start by setting up plugin packs
 </div>
 
 - `precss`: Sass-like features
@@ -433,7 +433,7 @@ Start with plugins packs
 ## Rule 3
 
 <div class="rule">
-Use PostCSS for maintable code, not only for syntax sugar
+Use PostCSS to keep code maintainable—not just for syntax sugar
 </div>
 
 ## CommonJS
@@ -469,10 +469,10 @@ var moment = ***require***('moment');
 
 ## Problems
 
-1. Selectors conflict
+1. Conflicting selectors
 2. Inherited properties
 
-## *Problem 1* Selectors Conflict
+## *Problem 1* Conflicting Selectors
 !type with-2-sides
 
 `logo.css`
@@ -535,7 +535,7 @@ class Logo extends React.Component {
 }
 ```
 
-## Choice
+## Ways to eliminate conflicting selectors
 
 **CSS Modules:**
 
@@ -610,7 +610,7 @@ div {
     white-space: normal;
 ```
 
-## The Best Isolation
+## The Best Isolation Method
 
 - CSS Modules
 - `postcss-autoreset`
@@ -628,7 +628,7 @@ h2 {
 ## Rule 4
 
 <div class="rule">
-Use PostCSS to reduce magic numbers in CSS
+Use PostCSS to get rid of “magic numbers” in CSS
 </div>
 
 ## [postcss-assets](https://github.com/borodean/postcss-assets)
@@ -645,7 +645,7 @@ Image sizes:
 
 ## [postcss-property-lookup](https://github.com/simonsmith/postcss-property-lookup)
 
-Reference to other property:
+Make a reference to another property:
 
 ```css
 .icon {
@@ -722,6 +722,7 @@ pre {
 ## [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician)
 !type with-2-sides
 
+
 ```css
 body {
     font-family: ***Alice***;
@@ -789,7 +790,7 @@ pre {
 ## Rule 6
 
 <div class="rule">
-Use PostCSS to lint CSS, not only to transform it
+Use PostCSS to lint CSS, not just to transform it
 </div>
 
 ## [stylelint](http://stylelint.io/)
@@ -872,7 +873,7 @@ img {
 !cover wow.jpg
 !type  with-shadow
 
-## PostCSS is not Sass Enemy
+## PostCSS is not an Enemy of Sass
 !type with-2-sides
 
 **Legacy project:**
@@ -895,10 +896,10 @@ img {
 
 ## The Right Way to Use PostCSS
 
-1. Use `postcss-use` for plugins with a custom syntax
-2. Start with plugins packs
+1. Use `postcss-use` for plugins with custom syntax
+2. Start by setting up plugin packs
 3. Write isolated components
-4. Reduce “magic numbers”
+4. Get rid of “magic numbers”
 5. Hide hacks
 6. Use linters
 
